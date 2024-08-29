@@ -12,7 +12,7 @@ export default defineConfig({
         enabled: true,
       },
       injectRegister: "auto",
-      includeAssets: ["vite.svg"],
+      includeAssets: ["pubic/android", "public/ios", "public/windows11"],
       manifest: {
         name: "PWA REACT AND VITE",
         short_name: "REACT APP",
