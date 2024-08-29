@@ -12,6 +12,9 @@ export default defineConfig({
         enabled: true,
       },
       injectRegister: "auto",
+      workbox: {
+        cleanupOutdatedCaches: false
+      },
       includeAssets: ["pubic/android", "public/ios", "public/windows11"],
       manifest: {
         name: "PWA REACT AND VITE",
