@@ -76,11 +76,24 @@ export class EventosES7 extends Component{
     }  
 }
 
+// function Boton(props){
+//     return(
+//         <button onClick={props.myonClick}>Boton hecho componente</button>
+//     );
+// }
+//Manera de hacerlo mas eficiente 
+const Boton = ({myonClick})=>(
+    <button onClick={myonClick}>Boton hecho componente</button>
+);
+
 //Eventos Nativos, Sinteticos y personalizados
 export class MasSobreEventos extends Component{
 
     handleCLick = (e)=>{
-        console.log(e);
+        console.log(e); 
+        console.log(e.nativeEvent);
+        console.log(e.target);
+        console.log(e.nativeEvent.target);
     }
 
     render(){
@@ -88,6 +101,8 @@ export class MasSobreEventos extends Component{
             <div>
                 <h2>Más Sobre Eventos</h2>
                 <button className="btn btn-outline-info" onClick={this.handleCLick}>Saludar</button>
+                {/* Para que funcione es necesario que cree un evento personalizado -- prop */}
+                <Boton myonClick={this.handleCLick}></Boton>
             </div>
         );
     }
