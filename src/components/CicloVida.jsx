@@ -34,8 +34,8 @@ export default class CicloVida extends Component{
             <>
                 <h2>Ciclo de vida de los componentes de clase</h2>
                 <h3>{this.state.hora}</h3>
-                <button onClick={this.iniciar}>Iniciar</button>
-                <button onClick={this.deter}>Detener</button>
+                <button className='btn btn-light' onClick={this.iniciar}>Iniciar</button>
+                <button className='btn btn-light' onClick={this.deter}>Detener</button>
             </>
         );
     }
